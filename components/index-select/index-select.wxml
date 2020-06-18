@@ -1,0 +1,11 @@
+<!--components/index-select/index-select.wxml-->
+<view class="select-box">
+  <view class="option-list" catchtap="optionTap">
+    <text class="option"
+      wx:for="{{options}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      data-name="{{item.name}}">{{item.name}}
+    </text>
+  </view>
+</view>

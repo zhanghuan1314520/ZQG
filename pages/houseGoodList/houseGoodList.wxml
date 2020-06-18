@@ -1,0 +1,53 @@
+<view class="search">
+    <navigator url="/pages/search/search" class="input">
+      <view class="keyword" >大家都在搜</view>
+    </navigator>
+  </view>
+  <view class="bgc"><image class="img" src="../../images/nav/1.png"></image></view>
+
+
+
+<view class="container">
+ <view class="banner">    
+        <image  src="{{banner.img_url}}"  class="img" model="aspectFit" />  
+  </view>
+
+
+ 
+
+  <view class="sort">
+    <view class="sort-box">
+      <view class="item1 {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
+        <text class="label">综合</text>
+      </view>
+      <view class="item2 {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
+        <text class="label">人气</text>
+      </view>
+      <view class="item3 {{currentSortType == 'price' ? 'active' : ''}}" bindtap="openSortFilter" id="priceSort">
+        <text class="label">附近</text>
+      </view>
+    </view>
+    <view class="sort-box-category" wx-if="{{categoryFilter}}">
+      <view class="item-one {{item.checked ? 'active' : ''}}" wx:for="{{filterCategory}}" wx:key="id" data-category-index="{{index}}" bindtap="selectCategory">{{item.name}}</view>
+    </view>
+  </view>
+  
+
+
+    <view class="cate-item">
+      <block wx:for="{{goodsList}}" wx:for-index="iindex" wx:for-item="iitem" wx:key="id">
+        <navigator class="item" url="../goods/goods?id={{iitem.id}}">
+          <image class="img" src="{{iitem.list_pic_url}}" mode="aspectFill"/>
+          <view class="cate-footer">
+            <view class="title">{{iitem.name}}</view>
+            <view class="price"><text class="rmb">￥</text>{{iitem.cost_price}}<text class="rmb">起</text></view>
+          </view>
+          <view  class="name-one">{{iitem.goods_brief}}</view>
+        </navigator>
+      </block>
+  </view>
+  <!-- 到底了 -->
+  <view class="line">
+    <span>到底啦，我是有底线的</span>
+  </view>
+</view>

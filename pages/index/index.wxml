@@ -1,0 +1,127 @@
+<view class="search">
+  <view bindtap="close" class="elect">
+    <text class="select-current" catchtap="areaTap">{{selected.name}}</text>
+    <select wx:if="{{isShow}}" id="select" options="{{options}}" key="id" text="name" bind:change="change"></select>
+  </view>
+
+  <navigator url="/pages/search/search" class="input">
+    <view class="keyword">大家都在搜</view>
+  </navigator>
+</view>
+<view class="bgc">
+  <image class="img" src="../../images/nav/1.png"></image>
+</view>
+
+
+
+
+
+<view class="container">
+  <swiper class="bannerss  radius" circular="true" autoplay="true" indicator-dots="true" duration="100" indicator-color="rgba(220,20,60)" show-menu-by-longpress="true" indicator-active-color="#ffffff" display-multiple-items="1">
+    <block wx:for="{{banner}}" wx:key="id">
+      <navigator url="/pages/goods/goods?id={{item.goods_id}}">
+        <swiper-item>
+          <image src="{{item.image_url}}" class="img" model="widthFix" />
+        </swiper-item>
+      </navigator>
+    </block>
+  </swiper>
+
+
+
+  <view class="m-menu">
+    <navigator class="item" url="/pages/category/index">
+      <image src="../../images/nav/img1.png" />
+      <text>农特产品</text>
+    </navigator>
+
+    <navigator class="item" url="/pages/newbie/newbie">
+      <image src="../../images/nav/img2.png" />
+      <text>新人专享</text>
+    </navigator>
+
+    <navigator class="item" url="/pages/WeeklyUpdate/WeeklyUpdate">
+      <image src="../../images/nav/img3.png" />
+      <text>本周上新</text>
+    </navigator>
+
+    <navigator class="item" url="/pages/faddish/faddish">
+      <image src="../../images/nav/img4.png" />
+      <text>爆款商品</text>
+    </navigator>
+
+    <navigator class="item" url="">
+      <image src="../../images/nav/img5.png" />
+      <text>城市据点</text>
+    </navigator>
+
+    <navigator class="item" url="/pages/countryGoodList/countryGoodList">
+      <image src="../../images/nav/img6.png" />
+      <text>乡村旅游</text>
+    </navigator>
+
+    <navigator class="item" url="/pages/houseGoodList/houseGoodList">
+      <image src="../../images/nav/img7.png" />
+      <text>民宿客栈</text>
+    </navigator>
+
+    <navigator class="item" url="/pages/factory/factory">
+      <image src="../../images/nav/img8.png" />
+      <text>绿色工厂</text>
+    </navigator>
+
+    <navigator class="item" url="/pages/town/town?id={{selected.id}}&name={{selected.name}}">
+      <image src="../../images/nav/img9.png" />
+      <text>特色小镇</text>
+    </navigator>
+    <navigator class="item" url="/pages/studyGoodList/studyGoodList">
+      <image src="../../images/nav/img10.png" />
+      <text>研学教培</text>
+    </navigator>
+  </view>
+
+
+
+
+  <view class="promotion">
+    <view class="promotion-left">
+      <navigator url="/pages/newbie/newbie">
+        <view class="promotion-nav">
+          <image class="promotion-img1" src="https://ae01.alicdn.com/kf/Hdf251e5e1ab9435486b789f37d456b8bt.jpg"></image>
+        </view>
+      </navigator>
+    </view>
+    <view class="promotion-right">
+      <navigator url="/pages/newbie/newbie">
+        <view class="promotion-nav1">
+          <image class="promotion-img2" src="https://ae01.alicdn.com/kf/Hdf251e5e1ab9435486b789f37d456b8bt.jpg"></image>
+        </view>
+      </navigator>
+      <navigator url="/pages/newbie/newbie">
+        <view class="promotion-nav2">
+          <image class="promotion-img2" src="https://ae01.alicdn.com/kf/Hdf251e5e1ab9435486b789f37d456b8bt.jpg"></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+
+
+
+
+  <view class="h">
+    <text class="common_title">附近促销</text>
+  </view>
+</view>
+
+<view class='case-page'>
+  <view class='list-masonry'>
+    <navigator class='item-masonry' wx:for="{{hotGoods}}" wx:for-index="index" wx:if="{{index<2}}" wx:for-item="item" wx:key="id" url="../goods/goods?id={{item.id}}">
+      <image src="{{item.list_pic_url}}" mode="spectFi"></image>
+      <!-- <view class="child">新人专享</view>  -->
+      <text class="name-one">{{item.name}}</text>
+      <text class="cost_price"><text class="rmb">￥</text>{{item.cost_price}}</text>
+      <text class="retail_price"> 原价￥{{item.retail_price}}</text>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+.sort {
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin: 50rpx 0;
+} 
+
+.sort-box {
+  width: 690rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  color: #999;
+}
+.sort-box .item1 {
+  width: 100rpx;
+  height: 60rxp;
+  text-align: center;
+  font-size: 30rpx;
+  border: 1px solid #999;
+  border-radius: 29.5rpx;
+}
+.sort-box .item2 {
+  width: 100rpx;
+  height: 60rxp;
+  text-align: center;
+  font-size: 30rpx;
+  border: 1px solid #999;
+  border-radius: 29.5rpx;
+  margin-left: 30rpx;
+}
+.sort-box .item3 {
+  width: 100rpx;
+  height: 60rxp;
+  text-align: center;
+  font-size: 30rpx;
+  border: 1px solid #999;
+  border-radius: 29.5rpx;
+   margin-left: 30rpx;
+}
+.sort-box .item .txt {
+  color: #999;
+}
+
+
+.label:hover, .label:active {
+  color: #fff;
+}
+
+.item1:hover, .item1:active {
+  background: #f55335;
+  color: #fff;
+  border:  #f55335;
+}
+
+.item2:hover, .item2:active {
+  background: #f55335;
+  color: #fff;
+   border:  #f55335;
+}
+
+.item3:hover, .item3:active {
+  background: #f55335;
+  color: #fff;
+ border:  #f55335;
+}

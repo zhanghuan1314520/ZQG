@@ -1,0 +1,76 @@
+page {
+  background: #f4f4f4;
+}
+.container{
+  margin: 30rpx;
+}
+.brand-info .name {
+  width: 100%;
+  height: 290rpx;
+  position: relative;
+}
+.cate-item .b {
+  width: 690rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cate-item .b .item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-bottom: 1rpx solid #f4f4f4;
+  height: auto;
+  overflow: hidden;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+}
+.cate-item .b .item-b {
+  border-right: 10rpx solid #f4f4f4;
+}
+.cate-item .item .img {
+  width: 340rpx;
+}
+.cate-item .item .name {
+  display: block;
+  width: 340rpx;
+  height: 70rpx;
+  margin: 11.5rpx 0 22rpx 0;
+  font-size: 25rpx;
+  color: #000;
+  flex-wrap: wrap;
+  /* font-weight: bolder; */
+  padding:10rpx;
+  justify-content: space-around;
+   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+}
+.cate-item .item .price {
+  display: block;
+  width: 365.625rpx;
+  height: 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #b4282d;
+}
+/* 分隔线--底部 */
+.line{
+    width: 90%;    /* 分隔线的长度 */
+    margin: auto;
+    height: 1px;    /* 分隔线粗细 */
+    text-align: center;
+    font-size: 24rpx;
+    color: #aaa;
+    background: #ccc;
+    margin-top: 60rpx;
+    margin-bottom: 22px;
+}
+.line span{
+    position: relative;
+    top: -8px;
+    background: #fff;
+    padding: 0px 10px;
+}

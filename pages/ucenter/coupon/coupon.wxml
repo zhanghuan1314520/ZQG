@@ -1,0 +1,29 @@
+<!--pages/ucenter/coupon/coupon.wxml-->
+<tablist tablist="{{tablist}}" binditemChang="handleiIemChang">
+    <view>
+        <black wx:if="{{tablist[0].isActive}}">
+            <view class="indexlist">
+               <view class="indexnav" wx:for="{{indexnav1}}" wx:for-item="item">
+                <image class="img" mode="widthFix" src="{{item.indexurl}}" ></image>
+               </view>
+                <view> 可以使用的</view>
+            </view>
+        </black>
+        <black wx:elif="{{tablist[1].isActive}}">
+         <view class="indexlist">
+               <view class="indexnav" wx:for="{{indexnav2}}" wx:for-item="item">
+                <image class="img" mode="widthFix" src="{{item.indexurl}}" ></image>
+               </view>
+               <view> 正在使用的</view>
+            </view>
+        </black>
+        <black wx:else>
+         <view class="indexlist">
+               <view class="indexnav" wx:for="{{indexnav3}}" wx:for-item="item">
+                <image class="img" mode="widthFix" src="{{item.indexurl}}" ></image>
+               </view>
+            </view>
+        </black>
+    </view>
+</tablist>
+

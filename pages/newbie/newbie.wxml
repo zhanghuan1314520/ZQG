@@ -1,0 +1,50 @@
+<!--pages/newbie/newbie.wxml-->
+<view class="coupon">
+  <view class="coupon-content">
+    <view class="content-list">
+      <image class="img" src="../../images/nav/ab.png"></image>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="bgc">
+  <image class="img" src="../../images/nav/1.png"></image>
+</view>
+
+
+<scroll-view class="image-group" scroll-x="true">
+<view class="item-content" wx:for="{{couponurlList}}" wx:for-item="item" wx:key="item.id">
+ 
+      <view wx:if="{{item.type===0}}"  bindtap='bindCoupon'>
+         <image class="img" src="{{item.image}}"/>
+      </view>
+    <view wx:elif="{{item.type===1}}">
+        <image class="img" src="{{item.image_close}}" />
+    </view>
+   </view>
+</scroll-view>
+<view class="title">用券省更多</view>
+<view class="lines">
+  <view class="tip"></view>
+</view>
+
+
+
+<view class='case-page'>
+  <view class='list-masonry'>
+    <navigator class='item-masonry' wx:for="{{topicList}}" wx:key="id" wx:for-index="iindex" wx:for-item="iitem" url="../goods/goods?id={{iitem.id}}">
+      <image src="{{iitem.list_pic_url}}" mode="spectFi"></image>
+      <!-- <view class="child">新人专享</view> -->
+      <text class="name-one">{{iitem.name}}</text>
+      <text class="cost_price"><text class="rmb">￥</text>{{iitem.cost_price}}</text>
+      <text class="retail_price"> 原价￥{{iitem.retail_price}}</text>
+    </navigator>
+  </view>
+</view>
+
+<!-- 到底了 -->
+<view class="line">
+  <span>到底啦，我是有底线的</span>
+</view>

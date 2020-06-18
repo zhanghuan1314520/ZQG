@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "知勤谷",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "select": "/components/index-select/index-select",
+    "sticky": "/components/sticky/index",
+    "sticky-item": "/components/sticky-item/index"
+  }
+}

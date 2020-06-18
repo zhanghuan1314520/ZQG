@@ -1,0 +1,21 @@
+/* pages/WeeklyUpdate/WeeklyUpdate.wxss */
+@import "../../style/common_list.wxss";
+@import "../../style/common_search.wxss";
+
+
+.container {
+    margin: 30rpx;
+  }
+
+.card-img {
+  width: 690rpx;
+  height: 300rpx;
+}
+
+.card {
+  width: 690rpx;
+  height: 300rpx;
+  margin-top: -80rpx;
+  border-radius: 14rpx;
+  overflow: hidden;
+}

@@ -1,0 +1,190 @@
+@import "../../app.wxss";
+@import "../../style/common.wxss";
+@import "../../style/common_list.wxss";
+
+/* 搜索 */
+.search {
+  width: 100%;
+  background-color: #f55335;
+  display: flex;
+}
+.elect {
+  width: 88rpx;
+  height: 30rpx;
+  font-size: 30rpx;
+  font-family: Lantinghei SC;
+  font-weight: 600;
+}
+ .search .input {
+    width: 570rpx;
+    height: 68rpx;
+    background: #fff;
+     margin: 0 30rpx 0 60rpx;
+     border-radius: 34rpx;
+  }
+
+.keyword {
+    width: 150rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    color: #666;
+    font-weight: 200;
+    font-size: 30rpx;
+    text-align: center;
+    margin: 19rpx 180rpx;
+  }
+
+.select-current {
+  position: relative;
+  width: 120rpx;
+  display: inline-block;
+  line-height: 70rpx;
+  padding-right: 10px;
+ margin: 0 30rpx;
+  color: #fff;
+}
+
+.bgc {
+   position: relative;
+    width: 100%;
+    height: 298rpx;
+    background-color: #F55335;
+  }
+  .bgc .img{
+    width: 100%;
+    height:350rpx; 
+  }
+
+
+  /* banner */
+
+  .bannerss {
+    width: 690rpx;
+    height: 300rpx;
+    overflow: hidden;
+    position: absolute;
+    top: 120rpx;
+  }
+  .bannerss .img {
+    width: 100%;
+    height: 300rpx;
+  }
+
+/* 菜单导航开始  */
+
+.m-menu {
+  width: 690rpx;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+ margin-top: 90rpx;
+}
+
+.m-menu .item {
+  width: 138rpx;
+  height: 150rpx;
+}
+
+.m-menu image {
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  margin: 10rpx auto;
+  border-radius: 30%;
+}
+
+.m-menu text {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #3e3e3e;
+}
+
+/* 优惠券开始 */
+
+/* .coupon-img {
+  width: 690rpx;
+  height: 150rpx;
+}
+
+.coupon {
+  width: 690rpx;
+  height: 150rpx;
+  margin-top: 30rpx;
+  border-radius: 40rpx;
+} */
+
+
+.promotion {
+  width: 690rpx;
+  height: 260rpx;
+  display: flex;
+  margin: 52rpx 0;
+}
+.promotion-img1{
+  width: 340rpx;
+  height: 260rpx;
+}
+.promotion-img2{
+  width: 340rpx;
+  height: 125rpx;
+}
+.promotion-left{
+  width: 340rpx;
+  height: 260rpx;
+  overflow: hidden;
+  border-radius: 14rpx;
+}
+.promotion-right{
+  width: 340rpx;
+  height: 260rpx;
+  margin-left: 10rpx;
+}
+.promotion-nav1{
+ width: 340rpx;
+  height: 125rpx;
+  overflow: hidden;
+  border-radius: 14rpx;
+}
+.promotion-nav2{
+ width: 340rpx;
+  height: 125rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+  border-radius: 14rpx;
+}
+
+
+
+
+
+/* 优惠券结束*/
+
+/* 附近促销 */
+
+/* 标题 */
+
+.h {
+  width: 690rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+}
+
+/* 标签 */
+
+.child {
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  background: #c89e64;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 45rpx;
+  position: absolute;
+  border-bottom-right-radius: 15rpx;
+}

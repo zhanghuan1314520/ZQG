@@ -1,0 +1,174 @@
+<view class="containe">
+  
+
+  <view class="banner">
+    <image src="{{town.pic_url}}" style="width: {{imageWidth}}px;" class="slide-image" model="aspectFit" />
+  </view>
+
+
+  <view class='nav'>
+    <block wx:for="{{nav}}" wx:key="key">
+      <view class="{{ curIndex === item.id ? 'txt' : ''}}" data-id="{{item.id}}" bindtap="navTap">{{item.title}}</view>
+    </block>
+  </view>
+  <scroll-view>
+    <block wx:for="{{list}}" wx:key="id">
+      <block wx:if="{{curNav == item.type }}">
+        <text class="pay-hint-content {{ellipsis?'ellipsis':'unellipsis'}}">{{item.name}}</text>
+        <view class="ellipsis-one" bindtap='ellipsis'>
+          <image class='img-ellipsis' src="{{ellipsis?'../../static/images/unellipsis.png':'../../static/images/ellipsis.png'}}"></image>
+        </view>
+      </block>
+    </block>
+  </scroll-view>
+  <!-- new-->
+
+  <view class="guidance">
+    <view class="content-title">最新资讯</view>
+    <navigator url="/pages/villageblogList/villageblogList?id={{town.id}}">
+    <view  class="content-more" style=" color: #666;">查看更多</view></navigator>
+
+  </view>
+  <navigator url="/pages/moreDetails/moreDetails?id={{blogList.id}}">
+    <view class="content-nav" >
+      <view>
+        <image class="content-img" src="{{blogList.pic_url}}"></image>
+      </view>
+      <view class="content-left">
+        <text style=" font-size: 30rpx;color: #000;">{{blogList.title}}</text>
+      </view>
+      <view class="content-right">
+        <text style=" font-size: 25rpx;color: #666;">{{blogList.info}}</text>
+      </view>
+    </view>
+  </navigator>
+
+<view class='title'>
+    <view class='titleSel' bindtap='titleClick' data-idx='0'>
+      <text>吃什么</text>
+      <hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+    </view>
+    
+    <view class='titleSel' bindtap='titleClick' data-idx='1'>
+      <text>买什么</text>
+      <hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+    </view>
+    <view class='titleSel' bindtap='titleClick' data-idx='2'>
+      <text>住哪里</text>
+      <hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+    </view>
+    <view class='titleSel' bindtap='titleClick' data-idx='3'>
+      <text>怎么玩</text>
+      <hr class="{{3 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+    </view>
+  </view>
+
+  <!--内容布局-->
+  <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+    <swiper-item class='swiper'>
+      <view  class="footer" wx:for="{{eatGoodsList}}" wx:key="id">
+      <navigator url="../goods/goods?id={{item.id}}">
+      <view class="goodslist">
+        <view class="footer-left">
+          <image class="footer-img" src="{{item.list_pic_url}}"></image>
+        </view>
+        <view class="footer-right">
+          <view class="footer-list">
+            <text style="  font-size: 30rpx; color: #000; font-weight: bold;">{{item.name}}</text>
+          </view>
+          <view class="footer-list-nav">
+            <text style="  font-size: 25rpx; color: #F55335; font-weight: bold;">{{item.goods_brief}}</text>
+          </view>
+          
+          <view class="footer-pic">
+            <text style="font-size: 20rpx; color: #F55335; font-weight: bold;">￥</text>
+            <text style="font-size: 35rpx; color: #F55335; font-weight: bold;">{{item.cost_price}}</text>
+            <text style="font-size: 25rpx; color: #F55335; font-weight: bold;">起</text>
+          </view>
+        </view>
+        </view>
+        </navigator>
+      </view>
+    </swiper-item>
+    <swiper-item class='swiper'>
+      <view  class="footer" wx:for="{{buyGoodsList}}" wx:key="id">
+      <navigator url="../goods/goods?id={{item.id}}">
+      <view class="goodslist">
+        <view class="footer-left">
+          <image class="footer-img" src="{{item.list_pic_url}}"></image>
+        </view>
+        <view class="footer-right">
+          <view class="footer-list">
+            <text style="  font-size: 30rpx; color: #000; font-weight: bold;">{{item.name}}</text>
+          </view>
+          <view class="footer-list-nav">
+            <text style="  font-size: 25rpx; color: #F55335; font-weight: bold;">{{item.goods_brief}}</text>
+          </view>
+          
+          <view class="footer-pic">
+            <text style="font-size: 20rpx; color: #F55335; font-weight: bold;">￥</text>
+            <text style="font-size: 35rpx; color: #F55335; font-weight: bold;">{{item.cost_price}}</text>
+            
+          </view>
+        </view>
+        </view>
+        </navigator>
+      </view>
+    </swiper-item>
+     <swiper-item class='swiper'>
+      <view  class="footer" wx:for="{{whereGoodsList}}" wx:key="id">
+      <navigator url="../goods/goods?id={{item.id}}">
+      <view class="goodslist">
+        <view class="footer-left">
+          <image class="footer-img" src="{{item.list_pic_url}}"></image>
+        </view>
+        <view class="footer-right">
+          <view class="footer-list">
+            <text style="  font-size: 30rpx; color: #000; font-weight: bold;">{{item.name}}</text>
+          </view>
+          <view class="footer-list-nav">
+            <text style="  font-size: 25rpx; color: #F55335; font-weight: bold;">{{item.goods_brief}}</text>
+          </view>
+          
+          <view class="footer-pic">
+            <text style="font-size: 20rpx; color: #F55335; font-weight: bold;">￥</text>
+            <text style="font-size: 35rpx; color: #F55335; font-weight: bold;">{{item.cost_price}}</text>
+           
+          </view>
+        </view>
+        </view>
+        </navigator>
+      </view>
+    </swiper-item>
+     <swiper-item class='swiper'>
+      <view  class="footer"  wx:for="{{playGoodsList}}" wx:key="id">
+      <navigator url="../goods/goods?id={{item.id}}">
+      <view class="goodslist">
+        <view class="footer-left">
+          <image class="footer-img" src="{{item.list_pic_url}}"></image>
+        </view>
+        <view class="footer-right">
+          <view class="footer-list">
+            <text style="  font-size: 30rpx; color: #000; font-weight: bold;">{{item.name}}</text>
+          </view>
+          <view class="footer-list-nav">
+            <text style="  font-size: 25rpx; color: #F55335; font-weight: bold;">{{item.goods_brief}}</text>
+          </view>
+
+          <view class="footer-pic">
+            <text style="font-size: 20rpx; color: #F55335; font-weight: bold;">￥</text>
+            <text style="font-size: 35rpx; color: #F55335; font-weight: bold;">{{item.cost_price}}</text>
+            
+          </view>
+        </view>
+        </view>
+        </navigator>
+      </view>
+    </swiper-item>
+  </swiper>
+
+</view>
+<!-- 到底了 -->
+<view class="line">
+  <span>到底啦，我是有底线的</span>
+</view>

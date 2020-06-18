@@ -1,0 +1,46 @@
+@import "../../style/commom_list_search.wxss";
+@import "../../style/common_list_list.wxss";
+@import "../../style/common_ label.wxss";
+
+
+.cate-footers {
+  width: 690rpx;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+ .title1 {
+  width: 650rpx;
+  height: 30;
+  line-height: 30rpx;
+  padding: 0 20rpx;
+  color: #000;
+  font-weight: bolder;
+  font-size: 30rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: justify;
+}
+
+.title2{
+  width: 650rpx;
+  height: auto;
+  line-height: 30rpx;
+  padding: 0 20rpx;
+  font-size: 25rpx;
+  color: #666;
+  font-weight: bold;
+   margin-top: 10rpx;
+  overflow: hidden;
+  text-align: justify;
+  text-indent: 55rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+
+
+

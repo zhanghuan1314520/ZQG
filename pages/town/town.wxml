@@ -1,0 +1,72 @@
+<!--pages/aa/aa.wxml-->
+<view class="select-wrap">
+  <view class="select-box">
+    <view class="select-current">
+      <view class="current-name">{{parentData.name}}</view>
+      <view class="currnt-town">
+        <block wx:for="{{townsList}}" wx:for-index="i" wx:key="id" data-id="{{item.id}}" data-name="{{item.name}}">
+          <text class="town" catchtap="isShowMore" wx:if="{{i<3}}">{{item.name}}</text>
+        </block>
+      </view>
+      <view wx:if="{{townsList.length>3}}" class="openMore" catchtap="isShowMore"> </view>
+      <view class="tp">
+        <image class="imgurl" src="../../images/icon/ck.png"></image>
+      </view>
+    </view>
+    <view class="option-list" wx:if="{{isShow}}">
+      <text style="color: #666;" catchtap="change" class="option" wx:for="{{townsList}}" wx:key="id" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}
+          </text>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="container">
+  <swiper class="banner" circular="true" autoplay="true" indicator-dots="true" duration="100" indicator-color="rgba(220,20,60)" show-menu-by-longpress="true" indicator-active-color="#ffffff" display-multiple-items="1">
+    <block wx:for="{{banners}}" wx:for-item="item" wx:key="{{item.id}}">
+      <swiper-item>
+        <image src="{{item.image_url}}" class="img" model="aspectFit" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <view class="sort">
+    <view class="sort-box">
+      <view class="item1 {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
+        <text class="label">综合</text>
+      </view>
+      <view class="item2 {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
+        <text class="label">人气</text>
+      </view>
+      <view class="item3 {{currentSortType == 'price' ? 'active' : ''}}" bindtap="openSortFilter" id="priceSort">
+        <text class="label">附近</text>
+      </view>
+    </view>
+    <view class="sort-box-category" wx-if="{{categoryFilter}}">
+      <view class="item-one {{item.checked ? 'active' : ''}}" wx:for="{{filterCategory}}" wx:key="id" data-category-index="{{index}}" bindtap="selectCategory">{{item.name}}</view>
+    </view>
+  </view>
+
+
+
+  <view class="cate-item">
+    <block wx:for="{{townsList}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+      <navigator id="{{'inToView'+item.id}}" class="item" url="/pages/towndet/towndet?id={{item.id}}&name={{item.name}}">
+        <image class="img" src="{{item.pic_url}}" background-size="cover"></image>
+        <view class="town-footer">
+          <view class="town-one">
+            <text class="title">{{item.name}}</text>
+          </view>
+          <view class="town-two">{{item.info}}</view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+
+  <!-- 到底了 -->
+  <view class="line">
+    <span>到底啦，我是有底线的</span>
+  </view>
+</view>

@@ -1,0 +1,63 @@
+<view class="container">
+  <view class="tab-nav">
+    <view class="tab {{ showType == 0 ? 'active' : ''}}" bindtap="switchTab" data-index='0'>全部</view>
+    <view class="tab {{ showType == 1 ? 'active' : ''}}" bindtap="switchTab" data-index='1'>
+      <view wx:if="{{status.toPay > 0 }}" class='list-num'>{{status.toPay}}</view>待付款
+    </view>
+    <view class="tab {{ showType == 2 ? 'active' : ''}}" bindtap="switchTab" data-index='2'>
+      <view wx:if="{{status.toDelivery > 0 }}" class='list-num'>{{status.toDelivery}}</view>待发货
+    </view>
+    <view class="tab {{ showType == 3 ? 'active' : ''}}" bindtap="switchTab" data-index='3'>
+      <view wx:if="{{status.toReceive > 0 }}" class='list-num'>{{status.toReceive}}</view>待收货
+    </view>
+  </view>
+
+  <view class="no-order {{hasOrder == 1? 'show':'' }}" hidden="" wx:if="{{orderList.length <= 0}}">
+    <!-- wx:if="{{orderList.length <= 0}}" -->
+    <image src="/images/icon/no-order.png" class="no-order-img"></image>
+    <view class="text">您目前没有相关订单</view>
+    <view class="to-index-btn" bindtap="toIndexPage">
+      马上去逛逛
+    </view>
+    <!-- <view class="to-index-btn" bindtap="test">
+            马上去逛逛
+        </view>  -->
+  </view>
+  <view wx:else class="wrap">
+    <!--  待付款  -->
+    <view bindtap='toOrderDetails' class='order-list-wrap' data-id="{{item.id}}" wx:for="{{orderList}}" wx:key="id">
+      <view class='list-top-wrap'>
+        <view class='time'>{{item.add_time}}</view>
+        <view class='status'>
+          <view class="pay-status" wx:if="{{item.offline_pay}}">线下支付订单</view>
+          <view class="order-status">{{item.order_status_text}}</view>
+        </view>
+      </view>
+      <view class="goods-list">
+        <view class="a-goods">
+          <view class="img-box">
+            <view class='image-wrap' wx:for="{{item.goodsList}}" wx:key="id" wx:for-item="gitem" wx:if="{{index<4}}">
+              <image src="{{gitem.list_pic_url}}" class="goods-image" />
+            </view>
+          </view>
+        </view>
+        <view class="b-goods">
+          <view class="bt">阳台花架悬挂式铁艺扩栏花 盆挂架多肉栏杆花加室</view>
+          <view class='goods-sum'>x{{item.goodsCount}}</view>
+          <view class="gg">规格：150*25*12cm</view>
+        </view>
+      </view>
+      <view class='order-price-wrap'>
+        <view class='trans'>总价¥{{item.actual_price}} 含运费￥0.00 实付款￥81.60</view>
+      </view>
+      <!-- 待付款 -->
+      <view class="order-edit" wx:if="{{item.handleOption.cancel && item.handleOption.pay}}">
+        <view catchtap='payOrder' class="edit-btn" data-orderid="{{item.id}}">继续支付</view>
+      </view>
+      <view wx:else class="order-edit">
+        <view class="dele-btn">查看详情</view>
+      </view>
+    </view>
+    <view wx:if="{{showTips}}" class="no-more-goods">没有更多商品啦</view>
+  </view>
+</view>

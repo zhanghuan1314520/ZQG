@@ -1,0 +1,75 @@
+page{
+  background-color: #eee;
+}
+.case-page{
+  padding:10rpx 30rpx;
+}
+.list-masonry{
+  column-count: 2;
+  column-gap: 10rpx;
+}
+.item-masonry{
+  width: 340rpx;
+  height: 490rpx;
+  background-color: #fff;
+  break-inside: avoid;/*避免在元素内部插入分页符*/
+  box-sizing: border-box; 
+  margin-bottom:10rpx;
+  border-radius: 14rpx;
+  overflow: hidden;
+  text-align: center;
+
+}
+.child {
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    text-align: center;
+    background: #c89e64;
+    color: #fff;
+    font-size: 25rpx;
+    line-height: 45rpx;
+    top: 510rpx;
+    border-bottom-right-radius: 15rpx;
+  } 
+
+.item-masonry image {
+  width: 340rpx;
+  height: 340rpx;
+}
+  .name-one {
+    display: block;
+    width: 307rpx;
+    height: 35rpx;
+    font-size: 28rpx;
+    color:rgba(51,51,51,1);
+    margin: 0 17rpx 15rpx 17rpx;
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
+.rmb {
+  font-size: 20rpx;
+   color: #f55335;
+   font-weight: bold;
+}
+  /* 现售价格 */
+  .cost_price {
+    display: block;
+    width: 340rpx;
+    height: 45rpx;
+    font-size: 30rpx;
+    color: #f55335;
+    line-height: 45rpx;
+    font-weight: bold;
+  }
+  /* 原价格 */
+  .retail_price {
+    display: block;
+    width: 340rpx;
+    height: 34rpx;
+    font-size: 24rpx;
+    color: #999;
+    font-weight: 400;
+    margin-top: 5rpx;
+    text-decoration: line-through;
+  }

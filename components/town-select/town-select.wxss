@@ -1,0 +1,65 @@
+/* components/town-select/town-select.wxss */
+.select-box {
+  position: relative;
+  width: 100%;
+  font-size: 30rpx;
+}
+.select-current {
+  position: relative;
+   padding: 0 20rpx; 
+  line-height: 70rpx;
+  display: flex;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.select-current::after {
+  position: absolute;
+  display: block;
+  right: 16rpx;
+  top: 30rpx;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10rpx solid transparent;
+  border-top: 10rpx solid #999;
+}
+
+.current-name {
+  display: block;
+  height: 70rpx;
+  word-wrap: normal;
+  overflow: hidden;
+  font-weight: bolder;
+}
+.currnt-town{
+  margin-left: 20rpx;
+}
+.currnt-town .town{
+   color: #97999A;
+  padding-left: 60rpx;
+}
+
+.option-list {
+  display: flex; 
+  flex-direction: row;
+   flex-wrap: wrap;
+   position: relative; 
+  top: 15rpx;
+   height: auto; 
+  width: 690rpx;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+  box-shadow: 0rpx 0rpx 1rpx 1rpx rgba(255,250,250, 0.8) inset;
+  background-color:rgba(255,255,255, 0.5);
+}
+.option {
+   display: block; 
+  height: 30rpx;
+  margin: 20rpx;
+}
+
+.option:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}

@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="cate-item">
+    <view class="b">
+      <block wx:for="{{topicList}}" wx:key="id" wx:for-index="iindex" wx:for-item="iitem">
+        <navigator class="item {{iindex % 2 == 0 ? 'item-b' : ''}} "   url="../goods/goods?id={{iitem.id}}">
+          <image class="img" src="{{iitem.daogou_url}}" background-size="cover"></image>
+          <text class="name">{{iitem.daogou_title}}</text>
+        </navigator>
+      </block>
+    </view>
+  </view>
+   <!-- 到底了 -->
+  <view class="line">
+  <span>到底啦，我是有底线的</span>
+</view>
+</view>

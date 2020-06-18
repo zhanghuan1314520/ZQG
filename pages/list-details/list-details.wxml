@@ -1,0 +1,19 @@
+<!--pages/list-details/list-details.wxml-->
+
+<rich-text nodes="{{html}}"></rich-text>
+
+
+
+<view class="container">
+<navigator url="/pages/details-list/details-list">
+    <view class="content-nav">
+      <view class="content-left">
+        <view class="content-title-left">有富文本</view>
+        <view class="content-time">发布时间:2020：05：20</view>
+      </view>
+       <view class="contetn-right">
+        <image class="content-img" src="../../images/nav/aa.png"></image>
+      </view>
+    </view>
+    </navigator>
+  </view>

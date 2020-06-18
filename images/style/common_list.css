@@ -1,0 +1,46 @@
+.cate-item  {
+  width: 690rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cate-item  .item {
+  display: flex;
+  flex-direction: column;
+  width: 340rpx;
+  height: 490rpx;
+ margin: 0 3rpx;
+ text-align: center;
+ overflow: hidden;
+  position: relative;
+}
+.cate-item .item .img {
+  width: 340rpx;
+  height: 340rpx;
+}
+.name-one {
+   display: block;
+  width: 296rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  margin: 10rpx 22rpx;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  font-family:"Times New Roman",Georgia,Serif;
+}
+/* 现售价格 */
+.cost_price {
+  display: block;
+  width: 340rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+}
+/* 原价格 */
+.retail_price {
+  display: block;
+  width: 340rpx;
+  height: 34rpx;
+  margin: 10rpx 0;
+}
+/* 优惠券 */

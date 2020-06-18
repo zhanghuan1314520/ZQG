@@ -1,0 +1,176 @@
+<view class="select-wrap">
+  <view class="select-box">
+    <view class="select-current">
+      <view class="current-name">{{parentData.name}}</view>
+      <view class="currnt-town">
+        <block wx:for="{{villageData}}" wx:for-index="i" wx:key="id" data-id="{{item.id}}" data-name="{{item.name}}">
+          <text class="town" catchtap="isShowMore" wx:if="{{i<3}}">{{item.name}}</text>
+        </block>
+      </view>
+      <view wx:if="{{villageData.length>3}}" class="openMore" catchtap="isShowMore">
+        <text class="arrow-down"></text>
+      </view>
+      <view class="tp">
+        <image class="imgurl" src="../../images/icon/ck.png"></image>
+      </view>
+    </view>
+
+    <view class="option-list" wx:if="{{isShow}}">
+      <text catchtap="change" class="option" wx:for="{{villageData}}" wx:key="id" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}
+          </text>
+    </view>
+  </view>
+</view>
+
+<view class="containe">
+  <!-- 轮播图 -->
+  <view class="banner">
+    <image src="{{town.pic_url}}" class="img" model="aspectFit" />
+  </view>
+  <view class="shadow">
+    <view class="shadow-content">方里村<text class="symbol">/</text><text class="name">FANGLI</text></view>
+  </view>
+  <!--  -->
+
+
+  <!-- 导航 -->
+  <view class='nav'>
+    <block wx:for="{{nav}}" wx:key="key">
+      <view class="{{ curIndex === item.id ? 'txt' : ''}}" data-id="{{item.id}}" bindtap="navTap">
+        <view class="nav-item">
+          <view class="nav-top">
+            <image class="img" src="{{item.imgurl}}"/>
+          </view>
+          <view class="nav-button">{{item.title}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+<!-- 1 -->
+<block wx:for="{{list}}" wx:key="key">
+    <block wx:if="{{curNav == item.type }}">
+    <!-- url="/pages/moreDetails/moreDetails?id={{blogList.id}}"  -->
+      <navigator url="/pages/moreDetails/moreDetails?id={{blogList.id}}">
+        <view class="content-nav">
+          <view class="content-left">
+            <view class="content-title-left">{{item.name}}</view>
+            <view class="content-time">发布时间:{{blogList.info}}</view>
+          </view>
+          <view class="contetn-right">
+            <image class="content-img" src="{{blogList.pic_url}}"></image>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </block> 
+  <!--  -->
+
+
+<!--  -->
+ <navigator url="/pages/details-list/details-list">
+  <view class="tipmore">
+      <view class="tipcontent">查看更多精选内容</view>
+      <view class="tipimg"><image class="img" src="/images/icon/notice-icon.png"></image></view> 
+  </view>
+ </navigator>
+ </view>
+ <!--  -->
+
+
+
+  <!-- 底部导航 -->
+  <view class='title'>
+    <view class='titleSel' bindtap='titleClick' data-idx='0'>
+      <text>吃什么</text>
+      <hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+    </view>
+    <view class='titleSel' bindtap='titleClick' data-idx='1'>
+      <text>买什么</text>
+      <hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+    </view>
+    <view class='titleSel' bindtap='titleClick' data-idx='2'>
+      <text>住哪里</text>
+      <hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+    </view>
+    <view class='titleSel' bindtap='titleClick' data-idx='3'>
+      <text>怎么玩</text>
+      <hr class="{{3 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+    </view>
+  </view>
+  <!--  -->
+  <!--内容布局-->
+  <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+    <!-- 1 -->
+    <swiper-item class='swiper'>
+      <view class="footer" wx:for="{{eatGoodsList}}" wx:key="id">
+        <navigator url="../goods/goods?id={{item.id}}">
+          <view class="goodslist">
+            <view class="footer-left">
+              <image class="footer-img" src="{{item.list_pic_url}}"></image>
+            </view>
+            <view class="footer-right">
+              <view class="footer-list">{{item.name}}</view>
+              <view class="footer-list-nav">{{item.goods_brief}}</view>
+              <view class="footer-pic"><text class="rmb">￥</text>{{item.cost_price}}</view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </swiper-item>
+    <!-- 2 -->
+    <swiper-item class='swiper'>
+      <view class="footer" wx:for="{{buyGoodsList}}" wx:key="id">
+        <navigator url="../goods/goods?id={{item.id}}">
+          <view class="goodslist">
+            <view class="footer-left">
+              <image class="footer-img" src="{{item.list_pic_url}}"></image>
+            </view>
+            <view class="footer-right">
+              <view class="footer-list">{{item.name}}</view>
+              <view class="footer-list-nav">{{item.goods_brief}}</view>
+              <view class="footer-pic">￥{{item.cost_price}}</view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </swiper-item>
+    <!-- 3 -->
+    <swiper-item class='swiper'>
+      <view class="footer" wx:for="{{whereGoodsList}}" wx:key="id">
+        <navigator url="../goods/goods?id={{item.id}}">
+          <view class="goodslist">
+            <view class="footer-left">
+              <image class="footer-img" src="{{item.list_pic_url}}"></image>
+            </view>
+            <view class="footer-right">
+              <view class="footer-list">{{item.name}}</view>
+              <view class="footer-list-nav">{{item.goods_brief}}</view>
+              <view class="footer-pic">￥{{item.cost_price}}</view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </swiper-item>
+    <!-- 4 -->
+    <swiper-item class='swiper'>
+      <view class="footer" wx:for="{{playGoodsList}}" wx:key="id">
+        <navigator url="../goods/goods?id={{item.id}}">
+          <view class="goodslist">
+            <view class="footer-left">
+              <image class="footer-img" src="{{item.list_pic_url}}"></image>
+            </view>
+            <view class="footer-right">
+              <view class="footer-list">{{item.name}}</view>
+              <view class="footer-list-nav">{{item.goods_brief}}</view>
+              <view class="footer-pic">￥{{item.cost_price}}</view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </swiper-item>
+  </swiper>
+<!-- 到底了 -->
+<!-- <view class="line">
+  <span>到底啦，我是有底线的</span>
+</view> -->

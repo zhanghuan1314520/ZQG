@@ -1,0 +1,14 @@
+<!--pages/details-list/details-list.wxml-->
+<view class="container">
+<navigator  url="/pages/moreDetails/moreDetails?id={{blogList.id}}">
+    <view class="content-nav">
+      <view class="content-left">
+        <view class="content-title-left">没有富文本</view>
+        <view class="content-time">发布时间:202:6:20</view>
+      </view>
+       <view class="contetn-right">
+        <image class="content-img" src="../../images/nav/ab.png"></image>
+      </view>
+    </view>
+  </navigator>
+  </view>

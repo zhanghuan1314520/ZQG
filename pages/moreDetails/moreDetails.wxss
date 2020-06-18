@@ -1,0 +1,5 @@
+/* pages/moreDetails/moreDetails.wxss */
+@import "../../style/common_ card.wxss";
+.container {
+  margin: 30rpx;
+}

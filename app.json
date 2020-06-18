@@ -1,0 +1,87 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/abc/abc",
+    "pages/aa/aa",
+    "pages/list-details/list-details",
+    "pages/dd/dd",
+    "pages/cc/cc",
+    "pages/aaa/aaa",
+    "pages/app-auth/index",
+    "pages/category/index",
+    "pages/studyGoodList/studyGoodList",
+    "pages/countryGoodList/countryGoodList",
+    "pages/houseGoodList/houseGoodList",
+    "pages/factoryblogList/factoryblogList",
+    "pages/factoryDetails/factoryDetails",
+    "pages/town/town",
+    "pages/towndet/towndet",
+    "pages/townblogList/townblogList",
+    "pages/village/villagedet",
+    "pages/villageblogList/villageblogList",
+    "pages/moreDetails/moreDetails",
+    "pages/shoppingGuide/shoppingGuide",
+    "pages/faddish/faddish",
+    "pages/WeeklyUpdate/WeeklyUpdate",
+    "pages/cart/cart",
+    "pages/share/index",
+    "pages/search/search",
+    "pages/order-check/index",
+    "pages/goods/goods",
+    "pages/ucenter/about/index",
+    "pages/ucenter/address/index",
+    "pages/ucenter/address-detail/index",
+    "pages/ucenter/index/index",
+    "pages/ucenter/settings/index",
+    "pages/ucenter/order-list/index",
+    "pages/ucenter/goods-list/index",
+    "pages/ucenter/order-details/index",
+    "pages/ucenter/express-info/index",
+    "pages/ucenter/footprint/index",
+    "pages/payResult/payResult",
+    "pages/payOffline/index",
+    "pages/villag_detail/villag_detail",
+    "pages/ucenter/coupon/coupon",
+    "pages/details-list/details-list"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F55335",
+    "enablePullDownRefresh": false,
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#F55335",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/nav/mall.png",
+        "selectedIconPath": "images/nav/mall-a.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/ucenter/order-list/index",
+        "iconPath": "images/nav/scart.png",
+        "selectedIconPath": "images/nav/scart-a.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "images/nav/icon-cart-b.png",
+        "selectedIconPath": "images/nav/icon-cart-r.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "iconPath": "images/nav/my-a-a.png",
+        "selectedIconPath": "images/nav/my-a.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

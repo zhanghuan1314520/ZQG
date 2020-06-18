@@ -1,0 +1,56 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="photography">当地指南</view>
+    <navigator url="/pages/search/search" class="input">
+      <van-icon name="search" />
+    </navigator>
+  </view>
+
+
+
+
+  <view class="banner">
+     <image src="{{imgUrl.pic_url}}" style="width: {{imageWidth}}px;" class="slide-image" model="aspectFit" />
+  </view>
+
+
+
+
+  <view class="sort">
+    <view class="sort-box">
+      <view class="item1 {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
+        <text class="label">综合</text>
+      </view>
+      <view class="item1 {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
+        <text class="label">人气</text>
+      </view>
+      <view class="item1 {{currentSortType == 'price' ? 'active' : ''}}" bindtap="openSortFilter" id="priceSort">
+        <text class="label">附近</text>
+      </view>
+      <view class="item2 {{currentSortType == 'category' ? 'active' : ''}}" bindtap="openSortFilter" id="categoryFilter">
+        <text class="label">筛选</text>
+      </view>
+    </view>
+    <view class="sort-box-category" wx-if="{{categoryFilter}}">
+      <view class="item-one {{item.checked ? 'active' : ''}}" wx:for="{{filterCategory}}" wx:key="id" data-category-index="{{index}}" bindtap="selectCategory">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="cate-item">
+    <view class="b">
+      <block wx:for="{{goodsList}}" wx:for-index="iindex" wx:for-item="iitem" wx:key="id">
+        <navigator class="item" url="/pages/factoryDetails/factoryDetails?id={{iitem.id}}">
+          <image class="img" src="{{iitem.pic_url}}" background-size="cover"></image>
+          <view class="cate-footer">
+            <view class="name-one">{{iitem.title}}</view>
+            <view class="name-two">{{iitem.info}}</view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <!-- 到底了 -->
+  <view class="line">
+    <span>到底啦，我是有底线的</span>
+  </view>
+</view>

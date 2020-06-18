@@ -1,0 +1,4 @@
+@import "../../style/commom_list_search.wxss";
+@import "../../style/common_list_list.wxss";
+@import "../../style/common_ label.wxss";
+

@@ -1,0 +1,15 @@
+/* pages/ucenter/coupon/coupon.wxss */
+.indexlist {
+  margin: 30rpx;
+}
+.indexlist .indexnav {
+  width: 690rpx;
+  height: 300rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
+  margin: 10rpx 0;
+}
+.indexlist .indexnav .img{
+  width: 690rpx;
+  height: 300rpx;
+}

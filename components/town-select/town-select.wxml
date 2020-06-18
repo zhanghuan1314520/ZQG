@@ -1,0 +1,20 @@
+<!--components/town-select/town-select.wxml-->
+<view class="select-box">
+  <view class="select-current" catchtap="openClose">
+   <view class="current-name">{{current.name}}</view>
+    <view class="currnt-town">
+      <text class="town">贤德</text>
+      <text class="town">大溪</text>
+      <text class="town">文村</text>
+      <text class="town">查口</text>
+    </view>
+  </view>
+
+  <view class="option-list" wx:if="{{isShow}}" catchtap="optionTap">
+    <text style="color: #97999A" class="option" data-id="{{defaultOption.id}}" data-name="{{defaultOption.name}}">{{defaultOption.name}}
+    </text>
+    <text style="color: #97999A" class="option" wx:for="{{result}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}
+    </text>
+
+  </view>
+</view>

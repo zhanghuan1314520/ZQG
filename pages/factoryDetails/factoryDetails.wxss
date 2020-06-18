@@ -1,0 +1,383 @@
+@import "../../style/common_ navigation.wxss";
+@import "../../style/common_ card.wxss";
+
+.containe {
+  height: 100%;
+  width: 690rpx;
+  margin: 0 30rpx;
+}
+
+/* 轮播图 */
+.banner {
+  margin-top: 30rpx;
+  height: 300rpx;
+  border-radius: 14rpx;
+  overflow: hidden;
+}
+.banner-img {
+  width: 690rpx;
+  height: 300rpx;
+}
+
+/* 结束 */
+
+/* 开始 */
+
+.nav {
+  display: flex;
+  width: 690rpx;
+  height: 135rpx;
+  justify-content: center;
+  align-items: center;
+  margin: 36rpx 0;
+}
+
+.nav .img {
+  width: 90rpx;
+  height: 90rpx;
+   border-radius: 30rpx;
+}
+
+.nav-item {
+  width: 105rpx;
+  height: 135rpx;
+  margin: 0 40rpx;
+}
+
+.nav-top {
+  width: 105rpx;
+  height: 90rpx;
+  text-align: center;
+}
+
+.nav-button {
+  width: 105rpx;
+  height: 30rpx;
+  font-size: 26rpx;
+  font-family: FZLanTingHeiS-R-GB;
+  font-weight: 400;
+  margin-top: 12rpx;
+  color: #333;
+  text-align: center;
+}
+
+
+.line {
+  width: 90%; /* 分隔线的长度 */
+  margin: auto;
+  height: 1px; /* 分隔线粗细 */
+  text-align: center;
+  font-size: 24rpx;
+  color: #ccc;
+  background: #ccc;
+  margin-top: 60rpx;
+  margin-bottom: 22px;
+}
+
+.line span {
+  position: relative;
+  top: -8px;
+  background: #f4f4f4;
+  padding: 0px 10px;
+}
+
+/*  */
+
+.title {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  justify-content: space-around;
+}
+
+txt{
+  font-size: 29rpx;
+  font-weight: bolder;
+  color:#F55335;
+}
+
+.titleSel {
+  color: #000;
+  font-size: 32rpx;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleUnsel {
+  color: #f55335;
+  font-size: #858fab;
+}
+/*  */
+.headerLineSel {
+  background: #f55335;
+  height: 6rpx;
+  width: 100rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.headerLineUnsel {
+  background: #fff;
+  height: 6rpx;
+  width: 100rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+.aa {
+  background: #f55335;
+  height: 6rpx;
+  width: 100rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.bb {
+  background: #fff;
+  height: 6rpx;
+  width: 100rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+/*  */
+.swiper {
+  width: 100%;
+  flex: 1;
+  height: 650rpx;
+  background-color: #fff;
+  /* overflow: scroll; */
+}
+
+.recordItem {
+  margin-top: 10rpx;
+  background-color: white;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+
+/* 下拉框组件样式 */
+
+/* 下拉组件样式 */
+
+.select-wrap {
+  width: 100%;
+  height: 110rpx;
+  background-color: #f55335;
+}
+
+.select-box {
+  width: 690rpx;
+  height: 110rpx;
+  /* position: relative; */
+  margin: 0 30rpx;
+}
+
+.select-current {
+  /* position: relative; */
+  display: flex;
+  width: 690rpx;
+  line-height: 110rpx;
+  box-sizing: border-box;
+}
+
+.current-name {
+  width: 90rpx;
+  font-size: 30rpx;
+  color: #fff;
+  font-weight: 600;
+}
+
+.currnt-town {
+  width: 400rpx;
+  margin: 0 70rpx;
+}
+
+.currnt-town .town {
+  color: #fff;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 30rpx;
+}
+
+.tp {
+  width: 44rpx;
+  height: 110rpx;
+  margin-left: 16rpx;
+}
+
+.imgurl {
+  width: 44rpx;
+  height: 30rpx;
+}
+
+.option-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  height: auto;
+  width: 690rpx;
+  box-sizing: border-box;
+  border-bottom-right-radius: 14rpx;
+  border-bottom-left-radius: 14rpx;
+  box-shadow: 0rpx 0rpx 1rpx 1rpx rgba(255, 250, 250, 0.8) inset;
+  background-color: rgba(195, 205, 221, 0.5);
+}
+
+.option {
+  display: block;
+  height: 30rpx;
+  width: 16.66%;
+  text-align: center;
+  margin: 20rpx 0;
+  color: #333;
+}
+
+.option:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.shadow {
+  width: 690rpx;
+  height: 52rpx;
+  background: #666;
+  border-radius: 0 0 14rpx 14rpx;
+  opacity: 0.6;
+  z-index: 100;
+  position: absolute;
+  top: 276rpx;
+}
+.shadow .symbol{
+  padding-left: 10rpx;
+}
+.shadow .name {
+  padding-left: 10rpx;
+}
+
+.shadow-content {
+  width: 635rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  margin: 0 30rpx;
+  font-size: 30rpx;
+  font-weight: 200;
+  font-family: Lantinghei SC;
+  color: #fff;
+}
+
+.tipmore {
+  width: 690rpx;
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  margin: 40rpx 0 20rpx 0;
+}
+.tipmore .img {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+
+
+.tipcontent {
+width:240rpx;
+height:40rpx;
+font-size:30rpx;
+font-family:FZLanTingHeiS-R-GB;
+font-weight:400;
+margin-left: 203rpx;
+color:#666;
+}
+.tipimg {
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 12rpx;
+}
+
+/* 地址部分开始 */
+.site {
+  width: 690rpx;
+  height: 171rpx;
+  margin:20rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.site .img {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.site-left {
+  width: 690rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+.site-map {
+  width: 100rpx;
+  height: 80rpx;
+  padding-top: 10rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: #f55335;
+  border-bottom-left-radius: 14rpx;
+  border-top-left-radius: 14rpx;
+}
+
+.site-content {
+  width: 470rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #f55335;
+  border-bottom-right-radius: 14rpx;
+  border-top-right-radius: 14rpx;
+}
+
+.site-phone {
+  width: 100rpx;
+  height: 80rpx;
+  padding-top: 10rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+  background: #f55335;
+  border-radius: 14rpx;
+}
+
+.site-right {
+  width: 690rpx;
+  height: 80rpx;
+  display: flex;
+  margin-top: 10rpx;
+  flex-direction: row;
+}
+
+.site-time {
+  width: 100rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  padding-top: 15rpx;
+  border-bottom-left-radius: 14rpx;
+  border-top-left-radius: 14rpx;
+  background: #fff;
+}
+
+.site-data {
+  width: 590rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  border-bottom-right-radius: 14rpx;
+  border-top-right-radius: 14rpx;
+}
+/*地址部分结束 */

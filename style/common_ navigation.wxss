@@ -1,0 +1,82 @@
+.footer {
+  width: 690rpx;
+  height: auto;
+  margin: 0 30rpx;
+}
+
+.goodslist {
+  display: flex;
+  flex-direction: row;
+  width: 690rpx;
+  height: 220rpx;
+  margin: 0 0 40rpx 0;
+}
+
+.footer-left {
+  width: 220rpx;
+  height: 220rpx;
+  overflow: hidden; 
+  border-radius: 14rpx;
+}
+
+.footer-img {
+  width: 220rpx;
+  height: 220rpx;
+}
+
+.footer-right {
+  width: 430rpx;
+  height: 220rpx;
+  margin-left: 40rpx;
+}
+
+.footer-list {
+  width: 430rpx;
+  height: 90rpx;
+  line-height: 44rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  flex-wrap: wrap;
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #333;
+  font-family: FZLanTingHeiS-R-GB;
+}
+
+.footer-list-nav {
+  width: 430rpx;
+  height: 30rpx;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: 20rpx 0;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 26rpx;
+  font-family: Lantinghei SC;
+  font-weight: 200;
+  color: #999;
+  line-height: 30rpx;
+}
+
+.footer-pic {
+  width: 430rpx;
+  height: 30rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  margin: 25rpx 0;
+  color: #F55335;
+}
+.rmb {
+  font-size: 20rpx;
+   color: #f55335;
+   font-weight: bold;
+}
+.bgc {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}

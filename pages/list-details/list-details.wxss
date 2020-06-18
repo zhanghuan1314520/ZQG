@@ -1,0 +1,25 @@
+@import "../../style/common_ card.wxss";
+.container {
+  margin: 30rpx;
+}
+
+.ALWfo {
+    display: flex;
+    flex-direction: row;
+    height:300rpx;
+    width: 100%;
+    overflow-x: auto;
+    background: rgb(255, 255, 255);
+}
+.iLINIY {
+    margin-left: 11.5rpx;
+}
+.jXFKFG {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 67rpx;
+    width: 61rpx;
+    margin-top: 3rpx;
+}

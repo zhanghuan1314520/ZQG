@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "特色小镇",
+  "usingComponents": {
+    "select": "/components/city-select/city-select"
+  }
+}

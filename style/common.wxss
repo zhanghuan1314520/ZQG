@@ -1,0 +1,80 @@
+.container {
+    margin: 0 30rpx;
+  }
+  /* 轮播图 */
+  .banner {
+    width: 690rpx;
+    height: 300rpx;
+    overflow: hidden;
+    margin-top: 20rpx;
+  }
+  .banner .img {
+    width: 100%;
+    height: 300rpx;
+  }
+  /* 所有圆角的大小*/
+  .radius {
+    border-radius: 14rpx;
+  }
+  /*所有模块背景颜色 */
+  .background {
+    background-color: #fff;
+  }
+  /* 所有的大的标题文字大小、颜色、加粗*/
+  .common_title {
+    font-size: 30rpx;
+    color: #333;
+    font-weight: bold;
+  }
+  /* 所有副标题的字体大小、颜色 */
+  .subtitle {
+    font-size: 28rpx;
+    color: #333;
+    font-weight: 400;
+  }
+  /* 所有价格的字体大小、颜色 */
+  .common_pic {
+    font-size: 27rpx;
+    font-weight: 800;
+    color: #f55335;
+  }
+  .common_rmb {
+    font-size: 20rpx;
+    font-weight: bold;
+    color: #f55335;
+  }
+  .common_discount_price{
+     font-size: 20rpx;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #7F8080;
+  }
+  /* 加载完的标识 */
+  .line {
+    width: 90%; /* 分隔线的长度 */
+    margin: auto;
+    height: 1px; /* 分隔线粗细 */
+    text-align: center;
+    font-size: 24rpx;
+    color: #ccc;
+    background: #ccc;
+    margin-top: 60rpx;
+    margin-bottom: 22px;
+  }
+  .line span {
+    position: relative;
+    top: -8px;
+    background: #f4f4f4;
+    padding: 0px 10px;
+  }
+  .child {
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    text-align: center;
+    background: #c89e64;
+    color: #fff;
+    font-size: 25rpx;
+    line-height: 45rpx;
+    border-bottom-right-radius: 15rpx;
+  }

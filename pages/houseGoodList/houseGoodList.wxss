@@ -1,0 +1,8 @@
+/* 搜索 */
+@import "../../style/commom_list_search.wxss";
+/* 列表 */
+@import "../../style/common_list_list.wxss";
+/* 标签 */
+@import "../../style/common_ label.wxss";
+
+

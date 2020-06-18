@@ -1,0 +1,99 @@
+@import "../../style/common_list.wxss";
+
+/* 优惠券 */
+
+
+.bgc {
+   position: relative;
+    width: 100%;
+    height: 298rpx;
+    margin-top: 120rpx;
+    background-color: #f55335;
+  }
+  .bgc .img{
+    width: 100%;
+    height:350rpx; 
+  }
+
+
+
+
+.coupon {
+  width: 750rpx;
+  height: auto;
+  position: absolute;
+  margin-top: -120rpx;
+  background-color: #f55335;
+}
+
+.coupon-content {
+  width: 690rpx;
+  height: auto;
+  margin: 0 30rpx;
+  position: relative;
+}
+
+.content-list {
+  width: 690rpx;
+  height: 300rpx;
+  position: relative;
+  /* margin-top: -100rpx 30rpx 0 30rpx; */
+  z-index: 999;
+}
+
+.coupon-content .img {
+  width: 690rpx;
+  height: 300rpx;
+  border-radius: 14rpx;
+}
+
+.image-group {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  width: 670rpx;
+  height: 170rpx;
+  background-color: #fff;
+  border: 10rpx solid #fff;
+  border-radius: 14rpx;
+  margin: -130rpx 30rpx 0 30rpx;
+  z-index: 1000;
+}
+.image-group  .img{
+  width: 254rpx;
+  height: 168rpx;
+ padding: 0 5rpx;
+  border-radius: 14rpx;
+}
+
+.title {
+  width: 690rpx;
+  height: 29rpx;
+  margin: 10rpx 30rpx;
+  line-height: 29rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #000;
+  margin-top: 100rpx;
+}
+.lines {
+  width: 690rpx;
+  height: 8rpx; 
+  margin: 10rpx 30rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.lines .tip{
+  width: 52rpx;
+  height: 8rpx;
+  border-radius: 3rpx;
+  background-color: #f55335;
+  margin: 0  316rpx;
+}
+
+.item-content {
+    width: 40%;
+    display: inline-block;
+}
